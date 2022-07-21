@@ -14,6 +14,9 @@
     $router->get("/app", function(){
         Loader::View("app");
     });
+    $router->get("/Controller", function(){
+        require("../Controller/.php");
+    });
 
     $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());
     $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['PATH_INFO']);
