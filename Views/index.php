@@ -4,4 +4,6 @@
     echo $twig->render("index.html", [
         "Hello" => "Hello World"
     ]);
+    
+    var_dump($_GET["GoogleSignin"]);
 ?>
