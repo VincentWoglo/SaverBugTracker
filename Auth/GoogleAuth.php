@@ -7,6 +7,8 @@
     class GoogleAuth
     {
       static function Auth(){
+        echo $_GET['code'];
+        echo "Hello World";
       }                   
     }
 ?>

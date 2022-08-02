@@ -11,6 +11,9 @@
     $router->get("/", function(){
         Loader::View("index");
     });
+    $router->get("/login", function(){
+        Loader::View("Login");
+    });
     $router->get("/app", function(){
         Loader::View("app");
     });
@@ -20,6 +23,5 @@
 
     $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());
     $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['PATH_INFO']);
-    // Print out the value returned from the dispatched function
-    //echo $response;
+ 
 ?>

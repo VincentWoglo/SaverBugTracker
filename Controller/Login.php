@@ -1,7 +1,9 @@
 <?php
-    //namespace SaverBugTracker\Controller;
+    namespace SaverBugTracker\Controller;
     include __DIR__."/../vendor/autoload.php";
+    use SaverBugTracker\Auth\GoogleAuth;
     use Dotenv\Dotenv;
+    use Google_Client;
     $dotenv = Dotenv::createImmutable(__DIR__."/../Auth", ".env.Credentials");
     $dotenv->load();
 
@@ -18,11 +20,16 @@
             $Client->setRedirectUri($RedirectUri);
             $Client->addScope("email");
             $Client->addScope("profile");
-            $LogIn_Status = "";
-           $LoginUrl = $Client->createAuthUrl();
 
-            session_start();
+
+            $LoginUrl = $Client->createAuthUrl();
+            header("Location:".$LoginUrl);
+        }
+
+        static function AuthorizeLogin(){
+            self::GoogleLogin();
         }
     }
-    Login::GoogleLogin();
+    
+    GoogleAuth::Auth();
 ?>

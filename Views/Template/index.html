@@ -5,20 +5,16 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Views/Styles/Css/Style.css?version=45">
         <title>{% block title %}Saver Bug Tracker{% endblock %} - Home</title>
     {% endblock %}
 </head>
 <body>
-    {% include "./Components/Index/Navbar.html" %}
-    <p>{{ Hello }}</p>
-    <p>{{ block("title") }}</p>
-    <p>{{ block("title") }}</p>
-    <p>{{ block("title") }}</p>
-    <p>{{ block("title") }}</p>
-    <p>{{ block("title") }}</p>
-    <p>{{ block("title") }}</p>
-    <p>{{ block("title") }}</p>
-    <input type="button" name="GoogleSignin" id="GoogleSignin" class="GoogleSignin"
-    value="Sign In With Google">
+    <div class="Container">
+        {% include "./Components/Index/Navbar.html" %}
+        {% include "./Components/Index/Hero.html" %}
+        {% include "./Components/Index/Stats.html" %}
+        <p>{{ block("title") }}</p>
+    </div>
 </body>
 </html>

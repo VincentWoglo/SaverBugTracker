@@ -1,0 +1,217 @@
+@use "./Colors";
+@use "./Fonts";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: Fonts.$Archivo;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.Container{
+    font-size: Fonts.$Font-Size-18px;
+    .NavigationSection{
+        .Navigation{
+            background-color: Colors.$White;
+            .Container{
+                width: 86%;
+                max-width: 1237px;
+                margin: auto;
+                .Wrapper{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-top: 34px;
+                    padding-bottom: 32px;
+                    .LogoWrapper{
+                        display: flex;
+                        flex-direction: row;
+                        cursor: pointer;
+                        align-items: center;
+                    }
+                    .MenuListItemsWrapper{
+                        display: flex;
+                        flex-direction: row;
+                        column-gap: 60px;
+                        .MenuListItem{
+                            cursor: pointer;
+                            font-weight: Fonts.$Font-Weight-600;
+                        }
+                    }
+                    .NavigationButtonWrapper{
+                        .NavigationSignInButton{
+                            padding: 15px 46px;
+                            cursor: pointer;
+                            background-color: Colors.$Victoria;
+                            border: 1px Colors.$Victoria solid;
+                            color: Colors.$White;
+                            font-weight: Fonts.$Font-Weight-700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .HeroSection{
+        .Hero{
+            .Container{
+                width: 100%;
+                .Wrapper{
+                    background-color: Colors.$Kournikova;
+                    padding-top: 150px;
+                    .heroContained{
+                        width: 86%;
+                        max-width: 1237px;
+                        margin: auto;
+                        .HeroTextMEssageWrapper{
+                            max-width: 978px;
+                            display: flex;
+                            align-items: center;
+                            margin: auto;
+                            .ArrowAffect{
+    
+                            }
+                            .HeroMessageWrapper{
+                                margin: auto;
+                                .HeroTitle{
+                                    max-width: 724px;
+                                    font-size: 64px;
+                                    text-align: center;
+                                    line-height: 130%;
+                                    font-weight: Fonts.$Font-Weight-700;
+                                }
+                                .HeroDescription{
+                                    max-width: 796px;
+                                    font-size: Fonts.$Font-Size-18px;
+                                    text-align: center;
+                                    margin-top: 30px;
+                                    line-height: 180%;
+                                    font-weight: Fonts.$Font-Weight-500;
+                                }
+                                .CallToAction{
+                                    width: 100%;
+                                    text-align: center;
+                                    margin-top: 60px;
+                                    .HeroCallToAction{
+                                        width: 50%;
+                                        padding: 24px 65px;
+                                        cursor: pointer;
+                                        background-color: Colors.$Victoria;
+                                        border: 1px Colors.$Victoria solid;
+                                        color: Colors.$White;
+                                        margin-top: 60px;
+                                        margin: auto;
+                                        font-weight: Fonts.$Font-Weight-700;
+                                        text-align: center;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    padding-bottom: 254px;
+                }
+                .HeroImageWrapper{
+                    width: 86%;
+                    max-width: 1237px;
+                    margin: auto;
+                    margin-top: -140px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .StatsSection{
+        margin-top: 95px;
+        .Stats{
+            .Container{
+                width: 86%;
+                max-width: 1237px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .LeftContainer{
+                    width: 50%;
+                    .SubHeader{
+                        font-weight: Fonts.$Font-Weight-700;
+                        font-size: Fonts.$Font-Size-18px;
+                        color: Colors.$Cabaret;
+                    }
+                    .SectionHeader{
+                        margin-top: 14px;
+                        font-size: Fonts.$Font-Size-44px;
+                        font-weight: Fonts.$Font-Weight-700;
+                        line-height: 130%;
+                    }
+                    .SectionDescription{
+                        line-height: 180%;
+                        color: Colors.$Spun-Pearl;
+                        margin-top: 50px;
+                    }
+                    .LearnMoreButton{
+                        padding: 15px 35px;
+                        background-color: Colors.$White;
+                        border: 2px Colors.$Victoria solid;
+                        color: Colors.$Victoria;
+                        cursor: pointer;
+                        font-weight: Fonts.$Font-Weight-700;
+                        margin-top: 50px;
+                    }
+                    .StatCounterWrapper{
+                        display: flex;
+                        column-gap: 50px;
+                        flex-direction: row;
+                        color: Colors.$Spun-Pearl;
+                        margin-top: 60px;
+                        strong{
+                            font-size: Fonts.$Font-Size-44px;
+                            font-weight: Fonts.$Font-Weight-700;
+                            margin-bottom: 10px;
+                            line-height: 130%;
+                            color: Colors.$Melanzane;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
