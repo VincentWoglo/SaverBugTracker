@@ -6,6 +6,7 @@
     use Google_Client;
     $dotenv = Dotenv::createImmutable(__DIR__."/../Auth", ".env.Credentials");
     $dotenv->load();
+    session_start();
 
     class Login
     {
@@ -20,16 +21,29 @@
             $Client->setRedirectUri($RedirectUri);
             $Client->addScope("email");
             $Client->addScope("profile");
+            $_SERVER['Profile'] = $Client;
+            var_dump($Client);
 
 
             $LoginUrl = $Client->createAuthUrl();
             header("Location:".$LoginUrl);
         }
+        static function RedirectLink(){
+            $Client = new Google_Client();
+            var_dump($Client);
+        }
 
-        static function AuthorizeLogin(){
+        static function AuthenticateLogin(){
+
             self::GoogleLogin();
+            GoogleAuth::AuthenticateUser();
+            // echo $Client->fetchAccessTokenWithAuthCode($_GET['code']);
+            // $UserResult = GetAccessToken($_ENV['ClientID'], $_ENV['RedirectUri'], $_ENV['ClientSecret'], $_GET['code']);
+            // $User = $UserResult['access_token'];
+            // echo GetUserProfileInfo($User);
+            
         }
     }
     
-    GoogleAuth::Auth();
+    Login::AuthenticateLogin();
 ?>

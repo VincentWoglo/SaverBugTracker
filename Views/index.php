@@ -4,7 +4,9 @@
     session_start();
 
     use SaverBugTracker\Auth\GoogleAuth;
-    GoogleAuth::Auth();
+    GoogleAuth::AuthenticateUser();
+    //Login::RedirectLink();
+    //var_dump($_SERVER['Profile']->fetchAccessTokenWithAuthCode($_GET['code']));
 
     $loader = new \Twig\Loader\FilesystemLoader('../Views/Template');
     $twig = new \Twig\Environment($loader);
