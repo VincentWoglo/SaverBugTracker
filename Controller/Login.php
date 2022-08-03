@@ -23,16 +23,13 @@
             $Client->addScope("profile");
             $_SERVER['Profile'] = $Client;
 
-
             $LoginUrl = $Client->createAuthUrl();
             header("Location:".$LoginUrl);
         }
 
         static function AuthenticateLogin(){
-
             self::GoogleLogin();
             GoogleAuth::AuthenticateUser();
-            
         }
     }
     

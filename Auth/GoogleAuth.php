@@ -31,17 +31,16 @@
             $UserInformation = $ClientService->userinfo->get();
   
             //Store $UserInformation in the local storage and in the database
-            var_dump(json_encode($UserInformation));
+            $_SESSION["UserInformation"] = $UserInformation;
           }
           catch(\InvalidArgumentException $e){
-            echo "There was a error trying to log you in";
           }
         }
       }   
-      
-      static function AuthaurizeUser(){
-        //Store Users info in Session
-        //Display user's Profile on signin
+      static function RedirectUserHome(){
+        header("Location:".$_ENV['RedirectUri']);
       }
+      
+      //Resources: https://programmierfrage.com/items/refresh-token-with-google-api-client-not-working
     }
 ?>
