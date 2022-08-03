@@ -22,25 +22,16 @@
             $Client->addScope("email");
             $Client->addScope("profile");
             $_SERVER['Profile'] = $Client;
-            var_dump($Client);
 
 
             $LoginUrl = $Client->createAuthUrl();
             header("Location:".$LoginUrl);
-        }
-        static function RedirectLink(){
-            $Client = new Google_Client();
-            var_dump($Client);
         }
 
         static function AuthenticateLogin(){
 
             self::GoogleLogin();
             GoogleAuth::AuthenticateUser();
-            // echo $Client->fetchAccessTokenWithAuthCode($_GET['code']);
-            // $UserResult = GetAccessToken($_ENV['ClientID'], $_ENV['RedirectUri'], $_ENV['ClientSecret'], $_GET['code']);
-            // $User = $UserResult['access_token'];
-            // echo GetUserProfileInfo($User);
             
         }
     }
