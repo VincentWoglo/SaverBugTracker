@@ -33,7 +33,11 @@
         }
 
         static function ClientLogout(){
-            $LogOutBtn = $_REQUEST['logout'];
+            //Copy what's in Logou.php here
+            //Then push this to github
+
+            //Check if the session exist
+            echo "Hello World";
         }
     }
     
