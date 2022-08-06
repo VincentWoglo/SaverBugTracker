@@ -31,6 +31,10 @@
             self::GoogleLogin();
             GoogleAuth::AuthenticateUser();
         }
+
+        static function ClientLogout(){
+            $LogOutBtn = $_REQUEST['logout'];
+        }
     }
     
     Login::AuthenticateLogin();

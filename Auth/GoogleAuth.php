@@ -37,10 +37,12 @@
           }
         }
       }   
+
       static function RedirectUserHome(){
         header("Location:".$_ENV['RedirectUri']);
       }
       
       //Resources: https://programmierfrage.com/items/refresh-token-with-google-api-client-not-working
+      //https://googleapis.github.io/google-api-php-client/v2.8.1/Google/Client.html
     }
 ?>

@@ -11,14 +11,17 @@
     $router->get("/", function(){
         Loader::View("index");
     });
+    $router->get("/index", function(){
+        Loader::View("index");
+    });
     $router->get("/login", function(){
         Loader::View("Login");
     });
     $router->get("/app", function(){
         Loader::View("app");
     });
-    $router->get("/Controller", function(){
-        require("../Controller/.php");
+    $router->get("/logout", function(){
+        Loader::View("Logout");
     });
 
     $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());

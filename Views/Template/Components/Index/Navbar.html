@@ -13,15 +13,24 @@
                     <li class="MenuListItem">About Us</li>
                 </ul>
                 <div class="NavigationButtonWrapper">
-                {% if UserInformation == false %}
-                    <a href="../Controller/Login.php">
-                        <button class="NavigationSignInButton">Sign In</button>
-                    </a>
-                {% endif %}
+                    {% if UserInformation == false %}
+                        <a href="../Controller/Login.php">
+                            <button class="NavigationSignInButton">Sign In</button>
+                        </a>
+                    {% endif %}
 
-                {% if UserInformation == true %}
-                    <img src={{UserInformation.picture}} alt="" style="border-radius: 100%; width: 40px; height: 40px;">
-                {% endif %}
+                    {% if UserInformation == true %}
+                        <img src={{UserInformation.picture}} alt="" class="UserProfileImage" id="UserProfileImage">
+                        <div class="UserProfileDropDown Hide" id="UserProfileDropDown">
+                            <div class="tip"></div>
+                            <ul class="DropDown">
+                                <li class="Dashboard">Dashboard</li>
+                                <a href="/logout">
+                                    <li class="Logout" name="logout">Log out</li>
+                                </a>
+                            </ul>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -44,6 +44,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.Hide{
+    display: none;
+}
 .Container{
     font-size: Fonts.$Font-Size-18px;
     .NavigationSection{
@@ -82,6 +85,37 @@ table {
                             border: 1px Colors.$Victoria solid;
                             color: Colors.$White;
                             font-weight: Fonts.$Font-Weight-700;
+                        }
+                        .UserProfileImage{
+                            border-radius: 100%;
+                            width: 40px;
+                            height: 40px;
+                            position: relative;
+                            cursor: pointer;
+                        }
+                        .UserProfileDropDown{
+                            position: absolute;
+                            background-color: #dadada;
+                            margin-left: -90px;
+                            margin-top: 20px;
+                            cursor: pointer;
+                            .DropDown{
+                                li{
+                                    padding: 15px;
+                                    &:hover{
+                                        background-color: Colors.$White;
+                                    }
+                                }
+                            }
+                            .tip{
+                                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                                background-color: #dadada;
+                                width: 20px;
+                                height: 20px;
+                                right: 0;
+                                top: -20px;
+                                position: absolute;
+                            }
                         }
                     }
                 }
