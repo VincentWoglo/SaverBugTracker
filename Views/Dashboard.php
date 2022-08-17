@@ -12,7 +12,6 @@
     ]);
     $twig->addExtension(new \Twig\Extension\DebugExtension());
     echo $twig->render("Dashboard.html", [
-        "Hello" => "Hello World",
         "UserInformation" => $_SESSION["UserInformation"],
     ]);
 ?>

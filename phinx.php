@@ -1,5 +1,8 @@
 <?php
     include __DIR__."/vendor/autoload.php";
+    use SaverBugTracker\Model\Connection;
+    $Connection = new Connection;
+    $Connection->Connect();
     //May have to load the connection class in the model and manually run it here
     
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/Model", ".env.Connection");

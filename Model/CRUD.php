@@ -6,8 +6,27 @@
     class CRUD extends Connection{
 
         //Paremeter is an array of key value pairs
-        static function InsertNewUser($USerInformation){
+        function InsertNewUser($USerInformation){
+            $DatabaseConnection = new Connection;
+            $Connection = $DatabaseConnection->Connect();
             
+            $Data = [
+                "UserId" => $USerInformation["id"],
+                "Email" => $USerInformation["Email"],
+                "FirstName" => $USerInformation["FirstName"],
+                "LastName" => $USerInformation["LastName"],
+                "DateJoined"=> date("m/d/Y"),
+                "DateOfBirth" => "NULL",
+                "TermsOfAgreement" => "NULL",
+                "Company" => "NULL"
+            ];
+            
+            $DataToBeInsertedIntoDatabase = "INSERT INTO users (UserId, Email, FirstName, LastName,DateJoined, DateOfBirth,
+            TermsOfAgreement, Company) VALUES (:UserId, :Email, :FirstName, :LastName, :DateJoined, :DateOfBirth,
+            :TermsOfAgreement, :Company)";
+            header("Cache-Control: no-cache, must-revalidate, max-age=0");
+            $InsertIntoDatabase = $Connection->prepare($DataToBeInsertedIntoDatabase);
+            $InsertIntoDatabase->execute($Data);
         }
 
         static function InsertNewProject(){
@@ -18,7 +37,7 @@
             $DatabaseConnection = new Connection;
             $Connection = $DatabaseConnection->Connect();
             
-            $GetUserIdFromDatabase = $Connection->prepare("SELECT * FROM users WHERE id = :UserId");
+            $GetUserIdFromDatabase = $Connection->prepare("SELECT * FROM users WHERE UserId = :UserId");
             $GetUserIdFromDatabase->execute([
                 "UserId" => $UserId
             ]);
@@ -44,19 +63,3 @@
         
     }
 ?>
-
-
-
-<!-- function GetUserInformation($UserId){
-            //echo $UserId;
-            $Connection = $this->Connect();
-            $GetUserIdFromDatabase = $Connection->prepare("SELECT * FROM users WHERE id = :UserId");
-            $GetUserIdFromDatabase->execute([
-                "UserId" => $UserId
-            ]);
-            //Return #GetUserIdFromDatabase and create function to fetch and to get the row count of the user
-            $RecieveUserIdFromDatabase = $GetUserIdFromDatabase->fetch();
-            $RowCount = $GetUserIdFromDatabase->rowCount();
-            echo $RowCount;
-            return $RecieveUserIdFromDatabase;
-        } -->

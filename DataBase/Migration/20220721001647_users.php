@@ -19,13 +19,15 @@ final class Users extends AbstractMigration
     public function change(): void
     {
         $UserTable = $this->table('Users');
-        $UserTable->addColumn('Email', 'string')
+        $UserTable->addColumn('UserId', 'string')
+                  ->addColumn('Email', 'string')
                   ->addColumn('FirstName', 'string')
                   ->addColumn('LastName', 'string')
                   ->addColumn('DateOfBirth', 'string')
                   ->addColumn('DateJoined', 'datetime')
                   ->addColumn('TermsOfAgreement', 'string')
                   ->addColumn('Company', 'string')
+                  //add user image
                   ->create();
     }
 }

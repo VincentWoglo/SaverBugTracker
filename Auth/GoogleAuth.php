@@ -48,11 +48,19 @@
             $UserId = $_SESSION["UserInformation"]->id;
             $CRUD = new CRUD;
             $DoesUserExistInDatabase = $CRUD->DoesUserExistInDatabase($UserId);
-            
+
+            $UserInformationInArray = array(
+              "id" =>$_SESSION["UserInformation"]->id,
+              "Email" => $_SESSION["UserInformation"]->email,
+              "FirstName" => $_SESSION["UserInformation"]->givenName,
+              "LastName" => $_SESSION["UserInformation"]->familyName
+            );
+
             if($DoesUserExistInDatabase === 0)
             {
-              echo "User Doesn't Exist";
+              $CRUD->InsertNewUser($UserInformationInArray);
             }
+            header('Location: http://localhost/SaverBugTracker/index');
             //Insert user information into database if the user doesn't already exist
             //Finally Redirect Users to index page
           }

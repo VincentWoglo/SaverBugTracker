@@ -19,7 +19,7 @@
         {
             try
             {
-                $this->Connection = new PDO("mysql:host=".$_ENV['HOST'].";dbname=".$_ENV['DBNAME'], $_ENV['USERNAME'], $_ENV["PASSWORD"]);
+                $this->Connection = new PDO("mysql:host=".$_ENV['HOST'].";dbname=".$_ENV['DBNAME'], $_ENV['USER'], $_ENV["PASSWORD"]);
                 $this->Connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $this->Connection;
             }
