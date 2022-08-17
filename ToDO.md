@@ -13,3 +13,7 @@ SjB^TkM@s7Sn6ECAW&vY
 
 Highlight skills and important things on resume
 Be clear with skills and very direct
+
+Users edit their profile info
+Dashboard View
+User cannot access Dashboard page unless they're logged in

@@ -10,6 +10,8 @@
 
     class Login
     {
+        //Redirects user to the prompted window for user to choose account
+        //This doesn't sign the user in yet
         static function GoogleLogin(){
             $Client = new Google_Client();
             $ClientID = $_ENV['ClientID'];

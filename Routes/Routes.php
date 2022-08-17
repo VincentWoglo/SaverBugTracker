@@ -23,8 +23,23 @@
     $router->get("/logout", function(){
         Loader::View("Logout");
     });
+    $router->get("/dashboard", function(){
+        Loader::View("Dashboard");
+    });
+    $router->get("/dashboard/trackbugs", function(){
+        Loader::View("CreateProject");
+    });
+    $router->get("/dashboard/trackbugs/{id:a}", function($id){
+        Loader::View("TrackBugs");
+    });
 
-    $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());
-    $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['PATH_INFO']);
+
+    try{
+        $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());
+        $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['PATH_INFO']);
+    }
+    catch(Phroute\Phroute\Exception\HttpRouteNotFoundException $e){
+        Loader::View("404");
+    }
  
 ?>

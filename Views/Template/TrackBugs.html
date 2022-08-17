@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Views/Styles/Css/TrackBugs.css?version=45">
+    <link rel="stylesheet" href="../../Views/Styles/Css/Dashboard.css?version=67865">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Wrapper">
+            {% include "./Components/Dashboard/Navbar.html" %}
+            <div class="Container">
+                <div class="MainDashbooard">
+                    <div class="Dashboard">
+                        {% include "./Components/Dashboard/DashboardMenu.html" %}
+                        <div class="LaunchProjectBoardWrapper">
+                            <button class="LaunchProjectBoard">Launch Board</button>
+                        </div>
+                        <div class="ProjectsTicketContained">
+                            {% include "./Components/TrackBugs/Filter.html" %}
+                            {% include "./Components/TrackBugs/BugListing.html" %}
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./Script/Function.js"></script>
+</body>
+</html>

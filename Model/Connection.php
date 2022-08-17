@@ -1,6 +1,9 @@
 <?php
+    namespace SaverBugTracker\Model;
+    use Dotenv\Dotenv;
+    use PDO;
     include (__DIR__.'/../vendor/autoload.php');
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, ".env.Connection");
+    $dotenv = Dotenv::createImmutable(__DIR__, ".env.Connection");
     $dotenv->load();
 
     class Connection
@@ -26,6 +29,4 @@
             }
         }
     }
-    $Connection = new Connection;
-    $Connection->Connect();
 ?>
