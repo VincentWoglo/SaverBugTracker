@@ -6,15 +6,15 @@
     class CRUD extends Connection{
 
         //Paremeter is an array of key value pairs
-        function InsertNewUser($USerInformation){
+        function InsertNewUser($UserInformation){
             $DatabaseConnection = new Connection;
             $Connection = $DatabaseConnection->Connect();
-            
+
             $Data = [
-                "UserId" => $USerInformation["id"],
-                "Email" => $USerInformation["Email"],
-                "FirstName" => $USerInformation["FirstName"],
-                "LastName" => $USerInformation["LastName"],
+                "UserId" => $UserInformation["id"],
+                "Email" => $UserInformation["Email"],
+                "FirstName" => $UserInformation["FirstName"],
+                "LastName" => $UserInformation["LastName"],
                 "DateJoined"=> date("m/d/Y"),
                 "DateOfBirth" => "NULL",
                 "TermsOfAgreement" => "NULL",
@@ -29,8 +29,24 @@
             $InsertIntoDatabase->execute($Data);
         }
 
-        static function InsertNewProject(){
+        static function CreateProject($UserInformation){
+            $DatabaseConnection = new Connection;
+            $Connection = $DatabaseConnection->Connect();
             
+            $Data = [
+                "Project_Id" => $UserInformation["Project_Id"],
+                "Project_Title" => $UserInformation["Project_Title"],
+                "Time_Created" => $UserInformation["Time_Created"],
+                "Project_Created_By" => $UserInformation["Project_Created_By"],
+                "User_Id"=> $UserInformation['User_Id'],
+                "Project_Manager" => $UserInformation['Project_Manager'],
+            ];
+            
+            $DataToBeInsertedIntoDatabase = "INSERT INTO projects (Project_Id, Project_Title, Time_Created, Project_Created_By, User_Id, Project_Manager) VALUES (:Project_Id, :Project_Title, :Time_Created, 
+            :Project_Created_By, :User_Id, :Project_Manager)";
+            header("Cache-Control: no-cache, must-revalidate, max-age=0");
+            $InsertIntoDatabase = $Connection->prepare($DataToBeInsertedIntoDatabase);
+            $InsertIntoDatabase->execute($Data);
         }
 
         static function GetUserInformation($UserId){

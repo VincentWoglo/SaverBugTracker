@@ -2,6 +2,7 @@
     session_start();
     include __DIR__."/../vendor/autoload.php";
 
+    var_dump($_SESSION["UserInformation"]);
     if(!$_SESSION["UserInformation"]){
         header("Location:http://localhost/SaverBugTracker/index");
     }
