@@ -27,64 +27,13 @@
                                     </div>
                                 </div>
                                 <div class="CreatedProjectWrapper">
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat jkdhfjdjfkjldfkedflk
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
-                                    <a href="trackbugs/834">
-                                        <div class="CreatedProject">
-                                            WingChat
-                                        </div>
-                                    </a>
+                                    {% for DisplayProject in DisplayProjects %}
+                                        <a href="trackbugs/{{DisplayProject.Project_Id}}">
+                                            <div class="CreatedProject">
+                                                {{DisplayProject.Project_Title}}
+                                            </div>
+                                        </a>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>

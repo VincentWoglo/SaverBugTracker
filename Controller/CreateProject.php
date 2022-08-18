@@ -9,6 +9,10 @@
 
     class CreateProject
     {
+        function DisplayProjects($Project_Created_By){
+            return CRUD::GetProjects($Project_Created_By);
+        }
+
         public function CreateNewProject(){
             $ProjectTitleInput = htmlspecialchars_decode(trim($_REQUEST['ProjectTitleInput']));
 
@@ -20,7 +24,11 @@
                 "User_Id"=> $_SESSION["UserInformation"]->id,
                 "Project_Manager" => $_SESSION["UserInformation"]->id
             );
-            CRUD::CreateProject($UserInformation);
+            if(!empty($ProjectTitleInput)){
+                CRUD::CreateProject($UserInformation);
+            }
+
+            //var_dump(CRUD::GetProjects($_SESSION["UserInformation"]->id));
         }
     }
 

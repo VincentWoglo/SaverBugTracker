@@ -49,6 +49,20 @@
             $InsertIntoDatabase->execute($Data);
         }
 
+        static function GetProjects($Project_Created_By){
+            $DatabaseConnection = new Connection;
+            $Connection = $DatabaseConnection->Connect();
+            
+            $GetAllProjectFromDatabase = $Connection->prepare("SELECT * FROM projects WHERE Project_Created_By = :Project_Created_By");
+            $GetAllProjectFromDatabase->execute([
+                "Project_Created_By" => $Project_Created_By
+            ]);
+            $RecieveUserIdFromDatabase = $GetAllProjectFromDatabase->fetchAll();
+            //Return #GetUserIdFromDatabase and create function to fetch and to get the row count of the user
+            //var_dump($RecieveUserIdFromDatabase);
+            return $RecieveUserIdFromDatabase;
+        }
+
         static function GetUserInformation($UserId){
             $DatabaseConnection = new Connection;
             $Connection = $DatabaseConnection->Connect();

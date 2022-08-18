@@ -3,7 +3,8 @@
     include __DIR__."/../vendor/autoload.php";
     use SaverBugTracker\Controller\CreateProject;
 
-    
+    $CreateProject = new CreateProject;
+    $DisplayProjects = $CreateProject->DisplayProjects($_SESSION["UserInformation"]->id);
 
     $loader = new \Twig\Loader\FilesystemLoader('../Views/Template');
     $twig = new \Twig\Environment($loader, [
@@ -11,6 +12,7 @@
     ]);
     $twig->addExtension(new \Twig\Extension\DebugExtension());
     echo $twig->render("CreateProject.html", [
-        "UserInformation" => $_SESSION["UserInformation"]
+        "UserInformation" => $_SESSION["UserInformation"],
+        "DisplayProjects" => $DisplayProjects
     ]);
 ?>
