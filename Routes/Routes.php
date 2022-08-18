@@ -8,21 +8,23 @@
     use Phroute\Phroute\RouteCollector;
     $router = new RouteCollector;
 
+    //Group These Routes and add middleware and auth
     $router->get("/", function(){
         Loader::View("index");
     });
     $router->get("/index", function(){
         Loader::View("index");
     });
+
+    //Group These Routes and add middleware and auth
     $router->get("/login", function(){
         Loader::View("Login");
-    });
-    $router->get("/app", function(){
-        Loader::View("app");
     });
     $router->get("/logout", function(){
         Loader::View("Logout");
     });
+
+    //Group These Routes and add middleware and auth
     $router->get("/dashboard", function(){
         Loader::View("Dashboard");
     });
@@ -30,6 +32,9 @@
         Loader::View("CreateProject");
     });
     $router->get("/dashboard/trackbugs/{id:a}", function($id){
+        Loader::View("TrackBugs");
+    });
+    $router->get("/dashboard/edit/{id:a}", function($id){
         Loader::View("TrackBugs");
     });
 
@@ -42,4 +47,8 @@
         Loader::View("404");
     }
  
+
+    //Look into routes.yaml for twig
+    //https://www.youtube.com/watch?v=YVy0ttwgYd8
+
 ?>
