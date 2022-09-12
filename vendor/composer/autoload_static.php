@@ -34,6 +34,7 @@ class ComposerStaticInit729b4aa60f0dc6980da124c5fb74eb3b
         ),
         'W' => 
         array (
+            'Workerman\\' => 10,
             'Webmozart\\Assert\\' => 17,
         ),
         'T' => 
@@ -68,6 +69,7 @@ class ComposerStaticInit729b4aa60f0dc6980da124c5fb74eb3b
             'PhpOption\\' => 10,
             'Phinx\\' => 6,
             'ParagonIE\\ConstantTime\\' => 23,
+            'PHPSocketIO\\' => 12,
         ),
         'M' => 
         array (
@@ -96,6 +98,7 @@ class ComposerStaticInit729b4aa60f0dc6980da124c5fb74eb3b
         ),
         'C' => 
         array (
+            'Channel\\' => 8,
             'Cake\\Utility\\' => 13,
             'Cake\\Datasource\\' => 16,
             'Cake\\Database\\' => 14,
@@ -113,6 +116,10 @@ class ComposerStaticInit729b4aa60f0dc6980da124c5fb74eb3b
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Workerman\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/workerman/workerman',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -215,6 +222,10 @@ class ComposerStaticInit729b4aa60f0dc6980da124c5fb74eb3b
         array (
             0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
+        'PHPSocketIO\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/workerman/phpsocket.io/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -266,6 +277,10 @@ class ComposerStaticInit729b4aa60f0dc6980da124c5fb74eb3b
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'Channel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/workerman/channel/src',
         ),
         'Cake\\Utility\\' => 
         array (

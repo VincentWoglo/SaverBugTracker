@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-InReview',
         'version' => 'dev-InReview',
-        'reference' => 'afaae49b8113c51ae266c5213d6be0652b02a4c0',
+        'reference' => '63978c143e8a27a304b7dacaaf10b74a70a99127',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-InReview',
             'version' => 'dev-InReview',
-            'reference' => 'afaae49b8113c51ae266c5213d6be0652b02a4c0',
+            'reference' => '63978c143e8a27a304b7dacaaf10b74a70a99127',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -391,8 +391,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -700,6 +700,33 @@
             'install_path' => __DIR__ . '/../webmozart/assert',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'workerman/channel' => array(
+            'pretty_version' => 'v1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => '3df772d0d20d4cebfcfd621c33d1a1ab732db523',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../workerman/channel',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'workerman/phpsocket.io' => array(
+            'pretty_version' => 'v1.1.14',
+            'version' => '1.1.14.0',
+            'reference' => 'a5758da4d55b4744a4cc9c956816d88ce385601e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../workerman/phpsocket.io',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'workerman/workerman' => array(
+            'pretty_version' => 'v4.1.0',
+            'version' => '4.1.0.0',
+            'reference' => '88ddf517e5c35bee072b2e453c4fcca0c6f1e59a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../workerman/workerman',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
     ),
 );

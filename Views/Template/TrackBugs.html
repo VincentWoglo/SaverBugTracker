@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Views/Styles/Css/TrackBugs.css?version=45">
-    <link rel="stylesheet" href="../../Views/Styles/Css/Dashboard.css?version=67865">
+    <link rel="stylesheet" href="../../Views/Styles/Css/TrackBugs.css?version=34">
+    <link rel="stylesheet" href="../../Views/Styles/Css/Dashboard.css?version=343">
     <title>Document</title>
 </head>
 <body>
@@ -16,9 +16,11 @@
                 <div class="MainDashbooard">
                     <div class="Dashboard">
                         {% include "./Components/Dashboard/DashboardMenu.html" %}
-                        <div class="LaunchProjectBoardWrapper">
-                            <button class="LaunchProjectBoard">Launch Board</button>
-                        </div>
+                        <!--<div class="LaunchProjectBoardWrapper">
+                            <a href="/SaverBugTracker/dashboard/255534a3d53fd25206127f48be609695/edit">
+                                <button class="LaunchProjectBoard">Launch Board</button>
+                            </a>
+                        </div>-->
                         <div class="ProjectsTicketContained">
                             {% include "./Components/TrackBugs/Filter.html" %}
                             {% include "./Components/TrackBugs/BugListing.html" %}

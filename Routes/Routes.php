@@ -12,30 +12,30 @@
     $router->get("/", function(){
         Loader::View("index");
     });
-    $router->get("/index", function(){
+    $router->get("/index/", function(){
         Loader::View("index");
     });
 
     //Group These Routes and add middleware and auth
-    $router->get("/login", function(){
+    $router->get("/login/", function(){
         Loader::View("Login");
     });
-    $router->get("/logout", function(){
+    $router->get("/logout/", function(){
         Loader::View("Logout");
     });
 
     //Group These Routes and add middleware and auth
-    $router->get("/dashboard", function(){
+    $router->get("/dashboard/", function(){
         Loader::View("Dashboard");
     });
-    $router->get("/dashboard/trackbugs", function(){
+    $router->get("/dashboard/trackbugs/", function(){
         Loader::View("CreateProject");
     });
-    $router->get("/dashboard/trackbugs/{id:a}", function($id){
+    $router->get("/dashboard/trackbugs/{id:a}/", function($id){
         Loader::View("TrackBugs");
     });
-    $router->get("/dashboard/edit/{id:a}", function($id){
-        Loader::View("TrackBugs");
+    $router->get("/dashboard/{id:a}/edit/", function($id){
+        Loader::View("Edit");
     });
 
 

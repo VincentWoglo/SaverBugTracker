@@ -17,3 +17,22 @@ Be clear with skills and very direct
 Users edit their profile info
 Dashboard View
 User cannot access Dashboard page unless they're logged in
+
+
+Give Option to delete a project
+When the user create a new project, redirect them to the edit board for that project like Trello does
+
+
+
+
+
+
+
+
+HTML, CSS/Scss, JavaScript, ReactJs, PHP, PHPUnit, Twig Templating, Docker, Laravel, MYSQL, Figma, Adobe XD, Editor X, Photoshop, Git, Gulp, OOP, MVC Model, Google Analytics, MailChimp, Litmus
+
+
+
+
+Re-apply Associate (Entry Level Software Engineer)
+

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/SaverBugTracker/Views/Styles/Css/TrackBugs.css?version=3456">
-    <link rel="stylesheet" href="/SaverBugTracker/Views/Styles/Css/Dashboard.css?version=34">
-    <link rel="stylesheet" href="/SaverBugTracker/Views/Styles/Css/CreateProject.css?version=334">
+    <link rel="stylesheet" href="/SaverBugTracker/Views/Styles/Css/TrackBugs.css?version=565">
+    <link rel="stylesheet" href="/SaverBugTracker/Views/Styles/Css/Dashboard.css?version=674">
+    <link rel="stylesheet" href="/SaverBugTracker/Views/Styles/Css/CreateProject.css?version=34">
     <title>Projects - TrackBugs</title>
 </head>
 <body>
@@ -28,11 +28,20 @@
                                 </div>
                                 <div class="CreatedProjectWrapper">
                                     {% for DisplayProject in DisplayProjects %}
-                                        <a href="trackbugs/{{DisplayProject.Project_Id}}">
                                             <div class="CreatedProject">
-                                                {{DisplayProject.Project_Title}}
+                                                <a href="trackbugs/{{DisplayProject.Project_Id}}">
+                                                    {{DisplayProject.Project_Title}}
+                                                </a>
+                                                <div class="MenuIcon">
+                                                    <img src="/SaverBugTracker/Assets/Dashboard/HeroImage.png" alt="">
+                                                    <div class="DisplayMenuList">
+                                                        <ul>
+                                                            <li>Edit</li>
+                                                            <li>Delete</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </a>
                                     {% endfor %}
                                 </div>
                             </div>

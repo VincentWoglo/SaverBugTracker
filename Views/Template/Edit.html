@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/SaverBugTracker/Views/Styles/Css/Dashboard.css?version=232">
+        <!-- Chart Js CDN Link -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>{% block title %}Edit Project{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    <div class="Container">
+        <div class="Wrapper">
+            {% include "./Components/Dashboard/Navbar.html" %}
+            <div class="MainDashbooard">
+                <div class="Dashboard">
+                    {% include "./Components/Dashboard/DashboardMenu.html" %}
+                    <section class="DisplayBugSection">
+                        <div class="Container">
+                            <div class="WrapperForTitle">
+                                <h1 class="BugTitle">
+                                    Create additional 'Custom Fields' for bugs to store additional information related to your business. Create additional 'Custom Fields' for bugs to store additional information related to your business. Create additional 'Custom Fields' for bugs to store additional information related to your business. Create additional 'Custom Fields' for bugs to store additional information related to your business.
+                                </h1>
+                            </div>
+                            <div class="BugDescription">
+                                <p class="BugDescriptionTitle">
+                                    This is where the bug description goes
+                                </p>
+                            </div>
+                            <div class="PriorityAndExpectedDueDate">
+                                <select name="" id="" class="">
+                                    <option value="">High</option>
+                                    <option value="">Normal</option>
+                                    <option value="">Low</option>
+                                </select>
+                                <div id="my-calendar"></div>
+                            </div>
+                            <div class="WrapperForComments">
+                                <div class="BugCommentsWrapper">
+                                    <div class="BugComments">
+                                        <textarea type="text" class="">
+
+                                        </textarea> <br />
+                                        <input type="submit" class="">
+                                    </div>
+                                    <div class="DisplayCommentsWrapper">
+                                        <div class="DisplayComments">
+                                            <div class="CommentWIthCommenter">
+                                                <img src="" alt="">
+                                                <p class="Comment">
+                                                    This is where the commeted comment goes
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- With locals-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" ></script>
+    <!-- Without locals-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" ></script>    
+    <script src="/SaverBugTracker/Script/Dashboard/Calendar.js"></script>
+    <script src="/SaverBugTracker/Script/Dashboard/Routing.js"></script>
+</body>
+</html>
