@@ -71,19 +71,25 @@ table {
                         .Active {
                             background-color: Colors.$Santas-Gray;
                             border-left: 4px Colors.$Fog solid;
+                            transition: .3s;
                         }
                         li{
                             padding: 20px 32px;
                             cursor: pointer;
                             color: Colors.$Fog;
+                            //transition: .3s;
                             .SettingsList{
-                                margin-top: 32px;
+                                //margin-top: 32px;
                             }
                             .ListWrapper{
                                 display: flex;
                                 .ListText{
                                     margin-left: 24px;
                                 }
+                            }
+                            a{
+                                text-decoration: none;
+                                color: Colors.$Fog;
                             }
                         }
                     }

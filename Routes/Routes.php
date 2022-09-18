@@ -25,16 +25,16 @@
     });
 
     //Group These Routes and add middleware and auth
-    $router->get("/dashboard/", function(){
+    $router->get("/home/dashboard/", function(){
         Loader::View("Dashboard");
     });
-    $router->get("/dashboard/trackbugs/", function(){
+    $router->get("/home/trackbugs/", function(){
         Loader::View("CreateProject");
     });
-    $router->get("/dashboard/trackbugs/{id:a}/", function($id){
+    $router->get("/home/trackbugs/{id:a}/", function($id){
         Loader::View("TrackBugs");
     });
-    $router->get("/dashboard/{id:a}/edit/", function($id){
+    $router->get("/home/trackbugs/{id:a}/edit/", function($id){
         Loader::View("Edit");
     });
 

@@ -64,7 +64,7 @@ table {
         }
         .ProjectsTicketContained{
             width: 90%;
-            border: 2px Colors.$Athens-Gray solid;
+            border: 1px Colors.$Athens-Gray solid;
             border-radius: 8px;
             padding: 32px;
             .ProjectTicketFilterSection{
@@ -123,8 +123,8 @@ table {
                                 word-break: break-all;
                                 padding: 20px 60px;
                                 .BugListingContent{
-                                    border-top: 1.5px Colors.$Athens-Gray solid;
-                                    border-bottom: 1.5px Colors.$Athens-Gray solid;
+                                    border-top: 1px Colors.$Athens-Gray solid;
+                                    border-bottom: 1px Colors.$Athens-Gray solid;
                                     .BugDetailsWrapperFirst{
                                         padding: 24px 0 24px;
                                         display:  flex;
