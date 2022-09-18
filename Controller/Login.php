@@ -1,0 +1,47 @@
+<?php
+    namespace SaverBugTracker\Controller;
+    include __DIR__."/../vendor/autoload.php";
+    use SaverBugTracker\Auth\GoogleAuth;
+    use Dotenv\Dotenv;
+    use Google_Client;
+    $dotenv = Dotenv::createImmutable(__DIR__."/../Auth", ".env.Credentials");
+    $dotenv->load();
+    session_start();
+
+    class Login
+    {
+        //Redirects user to the prompted window for user to choose account
+        //This doesn't sign the user in yet
+        static function GoogleLogin(){
+            $Client = new Google_Client();
+            $ClientID = $_ENV['ClientID'];
+            $ClientSecret = $_ENV['ClientSecret'];
+            $RedirectUri = $_ENV['RedirectUri'];
+            
+            $Client->setClientId($ClientID);
+            $Client->setClientSecret($ClientSecret);
+            $Client->setRedirectUri($RedirectUri);
+            $Client->addScope("email");
+            $Client->addScope("profile");
+            $_SERVER['Profile'] = $Client;
+
+            $LoginUrl = $Client->createAuthUrl();
+            header("Location:".$LoginUrl);
+        }
+
+        static function AuthenticateLogin(){
+            self::GoogleLogin();
+            GoogleAuth::AuthenticateUser();
+        }
+
+        static function ClientLogout(){
+            //Copy what's in Logou.php here
+            //Then push this to github
+
+            //Check if the session exist
+            echo "Hello World";
+        }
+    }
+    
+    Login::AuthenticateLogin();
+?>

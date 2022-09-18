@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /SaverBugTracker/Public/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ Index.php/$1 [QSA,L]
+
+#ErrorDocument 404 /404.html

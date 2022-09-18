@@ -1,0 +1,201 @@
+@use "Colors";
+@use "Fonts";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: Fonts.$Archivo;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.Container{
+    .Wrapper{
+        .LaunchProjectBoardWrapper{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 24px;
+            .LaunchProjectBoard{
+                width: 100%;
+                padding: 24px 32px;
+                font-weight: Fonts.$Font-Weight-700;
+                cursor: pointer;
+                background-color: Colors.$Shamrock;
+                border: 1px Colors.$Shamrock solid;
+                color: Colors.$White;
+            }
+        }
+        .ProjectsTicketContained{
+            width: 90%;
+            border: 1px Colors.$Athens-Gray solid;
+            border-radius: 8px;
+            padding: 32px;
+            .ProjectTicketFilterSection{
+                width: 100%;
+                .Container{
+                    width: 100%;
+                    .Wrapper{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        //border: 1px red solid;
+                        width: 100%;
+                        .FilteredTitle{
+                            color: Colors.$Charade;
+                            font-size: Fonts.$Font-Size-18px;
+                            font-weight: Fonts.$Font-Weight-700;
+                        }
+                        .FilterWrapper{
+                            display: flex;
+                            .SortWrapper, .FilterWrapper{
+                                display: flex;
+                                cursor: pointer;
+                                .SortTitle, .FilterTitle{
+                                    margin-left: 8px;
+                                    color: Colors.$Fiord;
+                                    font-weight: Fonts.$Font-Weight-500;
+                                }
+                            }
+                            .FilterWrapper{
+                                margin-left: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .BugListingSection{
+            margin-top: 48px;
+            .MainBugListing{
+                .Container{
+                    .BugListingWrapper{
+                        .BugListing{
+                            width: 100%;
+                            //border: 1px Colors.$Athens-Gray solid;
+                            .BugListingHeading{
+                                width: 100%;
+                                border-bottom: 2px Colors.$Athens-Gray solid;
+                                padding-bottom: 12px;
+                                td{
+                                    color: Colors.$Santas-Gray;
+                                    font-weight: Fonts.$Font-Weight-600;
+                                }
+                            }
+                            .BugListingContentContained{
+                                width: 100%;
+                                word-break: break-all;
+                                padding: 20px 60px;
+                                .BugListingContent{
+                                    border-top: 1px Colors.$Athens-Gray solid;
+                                    border-bottom: 1px Colors.$Athens-Gray solid;
+                                    .BugDetailsWrapperFirst{
+                                        padding: 24px 0 24px;
+                                        display:  flex;
+                                        align-items: center;
+                                        .BugDetailsWrapper{
+                                            .BugName{
+                                                font-weight: Fonts.$Font-Weight-600;
+                                                color: Colors.$Charade;
+                                            }
+                                            .UpdatedDate{
+                                                line-height: 16x;
+                                                margin-top: 4px;
+                                                color: Colors.$French-Gray;
+                                            }
+                                        }
+                                    }
+                                    td{
+                                        vertical-align: middle;
+                                        padding: 24px 0 24px 0;
+                                        .CustomerNameWrapper, .DateWrapper{
+                                            .CustomerName, .Date{
+                                                font-weight: Fonts.$Font-Weight-600;
+                                                color: Colors.$Charade;
+                                                
+                                            }
+                                            .Time, .DateJoined{
+                                                line-height: 16x;
+                                                margin-top: 4px;
+                                                color: Colors.$French-Gray;
+                                            }
+                                        }
+                                        .BugDetailsUserImageWrapper{
+                                            margin-right: 24px;
+                                            .BugDetailsUserImage{
+                                                width: 44px;
+                                                height: 44px;
+                                                border-radius: 100%;
+                                            }
+                                            
+                                        }
+                                        .PriorityButton{
+                                            padding: 5px 12px;
+                                            border-radius: 100px;
+                                            font-weight: Fonts.$Font-Weight-700;
+                                            text-transform: uppercase;
+                                        }
+                                        .HighPriority{
+                                            background-color: Colors.$Pomegranate;
+                                            border: 1px Colors.$Pomegranate solid;
+                                            color: Colors.$White;
+                                        }
+                                        .LowPriority{
+                                            background-color: Colors.$Amber;
+                                            border: 1px Colors.$Amber solid;
+                                            color: Colors.$White;
+                                        }
+                                        .NormalPriority{
+                                            background-color: Colors.$Shamrock;
+                                            border: 1px Colors.$Shamrock solid;
+                                            color: Colors.$White;
+                                        }
+                                        .ThreeDots{
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+@use "Colors";
+@use "Fonts";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: Fonts.$Archivo;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.Toggle{
+    display: none;
+}
+.Container{
+    width: 100%;
+    .Wrapper{
+        .CreateProjectWrapper{
+            display: flex;
+            column-gap: 20px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            .CreatedProjectWrapper{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 24px;
+                margin-top: 32px;
+                .CreatedProject{
+                    border: 1px Colors.$Athens-Gray solid;
+                    background-color: Colors.$Athens-Gray;
+                    width: 200px;
+                    text-align: center;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .MenuIcon{
+                        .ThreeDotsWrapper{
+                            width: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 5px;
+                            .dot-1, .dot-2, .dot-3{
+                                width: 2px;
+                                height: 2px;
+                                border: 1px Colors.$Melanzane solid;
+                                background-color: Colors.$Melanzane;
+                                border-radius: 100%;
+                            }
+                            position: relative;
+                        }
+                        .DisplayMenuList{
+                            display: block;
+                            position: absolute;
+                            border: 1px Colors.$Tuna solid;
+                            padding: 20px;
+                            margin-left: -30px;
+                            background-color: Colors.$White;
+                            border-radius: 5px;
+                            margin-top: 20px;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: Colors.$Tuna;
+                        .ProjectMainTitle{
+                            padding: 20px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;  
+                            overflow: hidden !important;
+                        }
+                    }
+                }
+            }
+            .CreateNewProjectWrapper{
+                width: 100%;
+                .CreateNewProject{
+                    padding: 20px;
+                    cursor: pointer;
+                    border: 1px Colors.$Shamrock solid;
+                    background-color: Colors.$Shamrock;
+                    color: Colors.$White;
+                    position: relative;
+                    width: 100%;
+                    font-weight: Fonts.$Font-Weight-600;
+                }
+                .CreateProjectPopUpWrapper{
+                    padding: 50px;
+                    border: 1px Colors.$Athens-Gray solid;
+                    position: absolute;
+                    background-color: Colors.$White;
+                    border-radius: 8px;
+                    margin-left: 50px;
+                    margin-top: 24px;
+                    transform: translateX(90%);
+                    .ProjectTitle{
+                        padding: 10px;
+                    }
+                    .CreateProjectButton{
+                        padding: 15px;
+                        width: 100%;
+                        border: 1px Colors.$Shamrock solid;
+                        background-color: Colors.$Shamrock;
+                        color: Colors.$White;
+                        cursor: pointer;
+                        font-weight: Fonts.$Font-Weight-600;
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

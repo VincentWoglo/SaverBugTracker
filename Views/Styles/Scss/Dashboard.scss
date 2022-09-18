@@ -1,0 +1,206 @@
+@use "Colors";
+@use "Fonts";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: Fonts.$Archivo;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.Container{
+    width: 100%;
+    .Wrapper{
+        display: flex;
+        flex-direction: row;
+        .NavigationSection{
+            .Container{
+                width: 255px;
+                height: 100vh;
+                background-color: Colors.$Tuna;
+                position: fixed;
+                .LogoWrapper{
+                    padding: 37px 32px 0 32px;
+                    .LogoText{
+                        font-size: Fonts.$Font-Size-18px;
+                        font-weight: Fonts.$Font-Weight-700;
+                        color: Colors.$White;
+                    }
+                }
+                .MenuListWrapper{
+                    margin-top: 59px;
+                    .MenuList{
+                        .Active {
+                            background-color: Colors.$Santas-Gray;
+                            border-left: 4px Colors.$Fog solid;
+                            transition: .3s;
+                        }
+                        li{
+                            padding: 20px 32px;
+                            cursor: pointer;
+                            color: Colors.$Fog;
+                            //transition: .3s;
+                            .SettingsList{
+                                //margin-top: 32px;
+                            }
+                            .ListWrapper{
+                                display: flex;
+                                .ListText{
+                                    margin-left: 24px;
+                                }
+                            }
+                            a{
+                                text-decoration: none;
+                                color: Colors.$Fog;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Dashboard Main Section Navigation */
+.MainDashbooard{
+    width: 77%;
+    transform: translateX(calc(10% + 20px));
+    margin: auto;
+    .Dashboard{
+        width: 100%;
+        margin: auto;
+        .DashboardNavigation{
+            nav{
+                .Container{
+                    width: 100%;
+                    margin: auto;
+                    //border: 1px red solid;
+                    .Wrapper{
+                        display: flex;
+                        justify-content: space-between;
+                        .SectionTitle{
+                            font-size: Fonts.$Font-Size-24px;
+                            font-weight: Fonts.$Font-Weight-700;
+                            color: Colors.$Charade;
+                        }
+                        .UserInformationWrapper{
+                            .UserProfile{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                .UserProfileImageWrapper{
+                                    cursor: pointer;
+                                    margin-left: 14px;
+                                    border: 1px Colors.$Athens-Gray solid;
+                                    padding: 4px;
+                                    border-radius: 100%;
+                                    .UserProfileImage{
+                                        width: 40px;
+                                        height: 40px;
+                                        border-radius: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        /*Dashboard Card Section*/
+        .ProgressCardSection{
+            margin-top: 54px;
+            main{
+                .Container{
+                    .Wrapper{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        .Card{
+                            border: 2px Colors.$Athens-Gray solid;
+                            padding: 24px 0 24px 0;
+                            text-align: center;
+                            cursor: pointer;
+                            border-radius: 8px;
+                            width: 258px;
+                            //Santas-Gray
+                            .CardTitle{
+                                color: Colors.$Santas-Gray;
+                                font-size: Fonts.$Font-Size-18px;
+                                font-weight: Fonts.$Font-Weight-700;
+                            }
+                            .CardProgressNumber{
+                                font-size: Fonts.$Font-Size-40px;
+                                font-weight: Fonts.$Font-Weight-700;
+                                margin-top: 12px;
+                            }
+                            &:hover{
+                                border: 2px Colors.$Victoria solid;
+                                .CardTitle{
+                                    color: Colors.$Victoria;
+                                }
+                                .CardProgressNumber{
+                                    color: Colors.$Victoria;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        /*Monthly Project Chart Section*/
+        .MonthlyProjectChartSection{
+            margin-top: 49px;
+            .MonthlyProjectChart{
+                .Container{
+                    .SectionTitle{
+                        font-size: Fonts.$Font-Size-24px;
+                        font-weight: Fonts.$Font-Weight-700;
+                    }
+                    .ProjectChartWrapper{
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

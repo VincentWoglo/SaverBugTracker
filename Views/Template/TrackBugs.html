@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Views/Styles/Css/TrackBugs.css">
+    <link rel="stylesheet" href="../../Views/Styles/Css/Dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Wrapper">
+            {% include "./Components/Dashboard/Navbar.html" %}
+            <div class="Container">
+                <div class="MainDashbooard">
+                    <div class="Dashboard">
+                        {% include "./Components/Dashboard/DashboardMenu.html" %}
+                        <!--<div class="LaunchProjectBoardWrapper">
+                            <a href="/SaverBugTracker/dashboard/255534a3d53fd25206127f48be609695/edit">
+                                <button class="LaunchProjectBoard">Launch Board</button>
+                            </a>
+                        </div>-->
+                        <section class="CreateProjectButtonSection">
+                            <div class="CreateBugsButtonWrapper">
+                                <input type="button" class="CreateBugsButton" value="Add Bug">
+                            </div>
+                        </section>
+                        <div class="ProjectsTicketContained">
+                            {% include "./Components/TrackBugs/Filter.html" %}
+                            {% include "./Components/TrackBugs/BugListing.html" %}
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./Script/Function.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<section class="NavigationSection">
+    <nav class="Navigation">
+        <div class="Container">
+            <div class="Wrapper">
+                <div class="LogoWrapper">
+                    <img src="./Assets/NavigationLogo.svg" alt="SaveBugTracker navigation logo image" class="LogoImage" />
+                    <h1 class="LogoText">SaveTracker</h1>
+                </div>
+                <ul class="MenuListItemsWrapper">
+                    <li class="MenuListItem">Product</li>
+                    <li class="MenuListItem">Services</li>
+                    <li class="MenuListItem">Article</li>
+                    <li class="MenuListItem">About Us</li>
+                </ul>
+                <div class="NavigationButtonWrapper">
+                    {% if UserInformation == false %}
+                        <a href="./Controller/Login.php">
+                            <button class="NavigationSignInButton">Sign In</button>
+                        </a>
+                    {% endif %}
+
+                    {% if UserInformation == true %}
+                        <img src={{UserInformation.picture}} alt="" class="UserProfileImage" id="UserProfileImage">
+                        <div class="UserProfileDropDown Hide" id="UserProfileDropDown">
+                            <div class="tip"></div>
+                            <ul class="DropDown">
+                                <a href="/SaverBugTracker/home/dashboard">
+                                    <li class="Dashboard">Dashboard</li>
+                                </a>
+                                <a href="/SaverBugTracker/logout">
+                                    <li class="Logout" name="logout">Log out</li>
+                                </a>
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
