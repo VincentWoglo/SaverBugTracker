@@ -6,3 +6,5 @@ const CloseModel = ()=>{
 }
 
 UserProfileImage.addEventListener('click', CloseModel);
+
+console.log('kjdj')

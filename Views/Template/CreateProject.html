@@ -28,17 +28,19 @@
                                 </div>
                                 <div class="CreatedProjectWrapper">
                                     {% for DisplayProject in DisplayProjects %}
-                                            <div class="CreatedProject">
+                                            <div class="CreatedProject" id="CreatedProject">
                                                 <a href="trackbugs/{{DisplayProject.Project_Id}}">
                                                     <h1 class="ProjectMainTitle">{{DisplayProject.Project_Title}}</h1>
                                                 </a>
-                                                <div class="MenuIcon">
-                                                    <div class="ThreeDotsWrapper">
-                                                        <span class="dot-1"></span>
-                                                        <span class="dot-2"></span>
-                                                        <span class="dot-3"></span>
+                                                <div>
+                                                    <div class="MenuIcon">
+                                                        <div class="ThreeDotsWrapper">
+                                                            <span class="dot-1"></span>
+                                                            <span class="dot-2"></span>
+                                                            <span class="dot-3"></span>
+                                                        </div>
                                                     </div>
-                                                    <div class="DisplayMenuList">
+                                                    <div class="DisplayMenuList Toggle">
                                                         <ul>
                                                             <li>Edit</li>
                                                             <li>Delete</li>
@@ -58,5 +60,6 @@
     </div>
     <script src="/SaverBugTracker/Script/Dashboard/Functionality.js"></script>
     <script src="/SaverBugTracker/Script/Dashboard/Routing.js"></script>
+    <script src="/SaverBugTracker/Script/Dashboard/CreateProject/Modal.js"></script>
 </body>
 </html>

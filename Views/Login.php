@@ -4,7 +4,5 @@
 
     $loader = new \Twig\Loader\FilesystemLoader('../Views/Template');
     $twig = new \Twig\Environment($loader);
-    echo $twig->render("Login.html", [
-        "Hello" => "Hello World"
-    ]);
+    echo $twig->render("Login.html", []);
 ?>
