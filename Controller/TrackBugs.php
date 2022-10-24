@@ -4,9 +4,10 @@
 
     class TrackBugs
     {
+        private array $bugField;
         function addNewBug()
         {
-
+            
         }
     }
 ?>
