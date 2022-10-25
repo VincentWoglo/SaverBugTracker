@@ -47,7 +47,7 @@ table {
 }
 
 .Toggle{
-    display: none;
+    display: none !important;
 }
 .Container{
     width: 100%;
@@ -89,16 +89,16 @@ table {
                             }
                             position: relative;
                         }
-                        .DisplayMenuList{
-                            display: block;
-                            position: absolute;
-                            border: 1px Colors.$Tuna solid;
-                            padding: 20px;
-                            margin-left: -30px;
-                            background-color: Colors.$White;
-                            border-radius: 5px;
-                            margin-top: 20px;
-                        }
+                    }
+                    .DisplayMenuList{
+                        display: block;
+                        position: absolute;
+                        border: 1px Colors.$Tuna solid;
+                        padding: 20px;
+                        margin-left: -30px;
+                        background-color: Colors.$White;
+                        border-radius: 5px;
+                        margin-top: 20px;
                     }
                     a{
                         text-decoration: none;

@@ -1,10 +1,11 @@
-const CreatedProject = document.getElementsByClassName("CreatedProject");
-const CreatedProjectArray = Array.from(CreatedProject).entries()
-const MenuIcon = document.getElementsByClassName("DisplayMenuList");
+const ThreeDotsWrapper = document.getElementsByClassName("ThreeDotsWrapper");
+const ThreeDotsWrapperArray = Array.from(ThreeDotsWrapper).entries();
+const DisplayMenuList = document.getElementsByClassName("DisplayMenuList");
 
-for(let [index, trigger] of CreatedProjectArray){
+for(let [index, trigger] of ThreeDotsWrapperArray){
     const toggle = ()=>{
-        MenuIcon[index].classList.toggle("Toggle")
+        console.log("error");
+        DisplayMenuList[index].classList.toggle("Toggle");
     }
-    trigger.addEventListener("click", toggle)
+    trigger.addEventListener("click", toggle);
 }
