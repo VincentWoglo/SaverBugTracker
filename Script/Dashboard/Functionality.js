@@ -35,6 +35,7 @@ const CheckInputLength = (ProjectTitleInput) => {
   return FinalResult;
 };
 
+let result = '';
 const SendDataToServer = (ProjectTitleInputs) => {
   let Data = new FormData();
   Data.append("ProjectTitleInput", ProjectTitleInputs.value);
@@ -43,10 +44,12 @@ const SendDataToServer = (ProjectTitleInputs) => {
   let ServerUrl = "http://localhost/SaverBugTracker/Controller/CreateProject.php"; //Add path to the php file
 
   Xhr.open("POST", ServerUrl, true);
+  Xhr.responseType = 'json';
   Xhr.onload = () => {
     if (Xhr.readyState == 4 && Xhr.status == 200) {
-      let ReturnedData = Xhr.responseText;
-      console.log(ReturnedData)
+      let ReturnedData = Xhr.response;
+      window.location.href = "http://localhost/SaverBugTracker/home/trackbugs/421848e78fee6aee2b4d71c0d3aa238e";
+      console.log(Xhr)
     }
   };
   Xhr.send(Data);
@@ -56,8 +59,9 @@ const Validation = () => {
   let CheckedPRojectTItleInput = CheckInputLength(ProjectTitle);
   console.log(CheckedPRojectTItleInput)
   if (CheckedPRojectTItleInput == true) {
-    console.log("The user can create a project");
+    //console.log("The user can create a project");
     SendDataToServer(ProjectTitle);
+    //window.locationm.href = "http://localhost/SaverBugTracker/home/trackbugs/"+JSON.parse(Xhr.response).ProjectId
   }
   else{
     console.log('There was a problem creating your project. Please try again')

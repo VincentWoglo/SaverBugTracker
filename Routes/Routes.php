@@ -1,6 +1,6 @@
 <?php
-    include (__DIR__.'/../vendor/autoload.php');
     use SaverBugTracker\Routes\Loader;
+    use SaverBugTracker\Controller\DeleteProjectController;
 
     error_reporting(1);
     //Documentation: https://github.com/mrjgreen/phroute
@@ -22,6 +22,15 @@
     });
     $router->get("/logout/", function(){
         Loader::View("Logout");
+    });
+
+    //https://laracasts.com/discuss/channels/laravel/how-to-call-a-laravel-controller-function-outside-laravel-framework
+    //https://www.vincecampanale.com/blog/2017/06/07/new-keyword/
+    $router->get("/home/delete/{id}", function($id){
+        Loader::Controller("DeleteProjectController@RemoveProject", ['ProjectId' => $id, 'dkf'=>'sdf']);
+        //This class shouild be loaded in the Loader::Controller();
+        // $DeleteProject = new DeleteProjectController('9b3a383e734e3dd014c8b7ad27c5a894');
+        // $DeleteProject->PremanentelyRemoveProject();
     });
 
     //Group These Routes and add middleware and auth

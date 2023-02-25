@@ -1,0 +1,15 @@
+version: "1.0"
+
+services:
+  app:
+    build: ./
+    image: SaverBugTracker
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www
+  db:
+    image: mysql:8
+    ports:
+      - "3307:3306"
+    environment:

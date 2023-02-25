@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include __DIR__."/../vendor/autoload.php";
     use SaverBugTracker\Controller\CreateProject;
 
     $CreateProject = new CreateProject;

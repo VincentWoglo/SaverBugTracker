@@ -27,6 +27,9 @@
                                     </div>
                                 </div>
                                 <div class="CreatedProjectWrapper">
+                                    {% if DisplayProjects | length < 1 %}
+                                        <p style="text-align: center; margin: auto;">Please Create A Project</p>
+                                    {% endif %}
                                     {% for DisplayProject in DisplayProjects %}
                                             <div class="CreatedProject" id="CreatedProject">
                                                 <a href="trackbugs/{{DisplayProject.Project_Id}}">
@@ -41,9 +44,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="DisplayMenuList Toggle">
-                                                        <ul>
-                                                            <li>Edit</li>
-                                                            <li>Delete</li>
+                                                        <ul class="MenuList">
+                                                            <li class="EditButton">
+                                                                <a href="./edit">Edit</a>
+                                                            </li>
+                                                            <li class="DeleteButton">
+                                                                <a href="./delete/{{DisplayProject.Project_Id}}">Delete</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>

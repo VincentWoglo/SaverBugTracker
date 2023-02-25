@@ -3,19 +3,23 @@
     use Dotenv\Dotenv;
     use PDO;
     include (__DIR__.'/../vendor/autoload.php');
-    $dotenv = Dotenv::createImmutable(__DIR__, ".env.Connection");
+    $dotenv = Dotenv::createImmutable(__DIR__, ".env.DB_Connection");
     $dotenv->load();
 
     class Connection
     {
         protected $Connection;
         
-        function __construct()
+        public function __construct()
         {
             $this->Connection;
         }
     
-        function Connect()
+
+        /**
+         * Returns database connection
+         */
+        protected function Connect()
         {
             try
             {
@@ -23,6 +27,8 @@
                 $this->Connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $this->Connection;
             }
+
+
             catch (PDOException $error)
             {
                 echo "Please check you connection" .$error->getMessage();

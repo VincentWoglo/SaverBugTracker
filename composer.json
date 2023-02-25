@@ -5,7 +5,8 @@
         "vlucas/phpdotenv": "^5.4",
         "robmorgan/phinx": "^0.12.12",
         "google/apiclient": "^2.12",
-        "workerman/phpsocket.io": "^1.1"
+        "workerman/phpsocket.io": "^1.1",
+        "symfony/ux-twig-component": "^2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "9.5"

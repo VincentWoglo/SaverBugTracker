@@ -15,6 +15,7 @@
 
         public function CreateNewProject(){
             $ProjectTitleInput = htmlspecialchars_decode(trim($_REQUEST['ProjectTitleInput']));
+            $ProjectId = bin2hex(random_bytes(16));
 
             $UserInformation = array(
                 "Project_Id" => bin2hex(random_bytes(16)),
@@ -24,6 +25,7 @@
                 "User_Id"=> $_SESSION["UserInformation"]->id,
                 "Project_Manager" => $_SESSION["UserInformation"]->id
             );
+
             if(!empty($ProjectTitleInput)){
                 CRUD::CreateProject($UserInformation);
             }

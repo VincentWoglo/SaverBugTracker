@@ -65,8 +65,8 @@ table {
                 gap: 24px;
                 margin-top: 32px;
                 .CreatedProject{
-                    border: 1px Colors.$Athens-Gray solid;
-                    background-color: Colors.$Athens-Gray;
+                    border: 1px Colors.$Seashell solid;
+                    background-color: Colors.$Seashell;
                     width: 200px;
                     text-align: center;
                     cursor: pointer;
@@ -94,11 +94,19 @@ table {
                         display: block;
                         position: absolute;
                         border: 1px Colors.$Tuna solid;
-                        padding: 20px;
+                        //padding: 20px;
                         margin-left: -30px;
                         background-color: Colors.$White;
                         border-radius: 5px;
                         margin-top: 20px;
+                        .MenuList{
+                            .EditButton, .DeleteButton{
+                                padding: 10px 20px;
+                                &:hover{
+                                    background-color: Colors.$Fiord;
+                                }
+                            }
+                        }
                     }
                     a{
                         text-decoration: none;
@@ -118,8 +126,8 @@ table {
                 .CreateNewProject{
                     padding: 20px;
                     cursor: pointer;
-                    border: 1px Colors.$Shamrock solid;
-                    background-color: Colors.$Shamrock;
+                    border: 1px Colors.$Mariner solid;
+                    background-color: Colors.$Mariner;
                     color: Colors.$White;
                     position: relative;
                     width: 100%;
@@ -140,8 +148,8 @@ table {
                     .CreateProjectButton{
                         padding: 15px;
                         width: 100%;
-                        border: 1px Colors.$Shamrock solid;
-                        background-color: Colors.$Shamrock;
+                        border: 1px Colors.$Mariner solid;
+                        background-color: Colors.$Mariner;
                         color: Colors.$White;
                         cursor: pointer;
                         font-weight: Fonts.$Font-Weight-600;

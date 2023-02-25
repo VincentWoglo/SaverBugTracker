@@ -1,6 +1,5 @@
 <?php
     namespace SaverBugTracker\Model;
-    session_start();
     use SaverBugTracker\Model\Connection;
 
     class CRUD extends Connection{
